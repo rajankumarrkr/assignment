@@ -18,3 +18,4 @@ A responsive landing page built from a Figma design using HTML, CSS, and JavaScr
 
 ## Live Demo
 
+https://assignment-olive-zeta.vercel.app/
