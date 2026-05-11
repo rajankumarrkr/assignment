@@ -253,11 +253,13 @@ button {
   gap: 14px;
 }
 
-.sidebar-links a svg {
+.sidebar-links a svg,
+.sidebar-links a img {
   width: 20px;
   height: 20px;
   min-width: 20px;
   flex-shrink: 0;
+  object-fit: contain;
 }
 
 .sidebar-btn {
@@ -464,9 +466,9 @@ button {
 /* Right */
 
 .hero-image {
-  width: 739.13px;
-  height: 607px;
-  flex-shrink: 0;
+  width: 100%;
+  max-width: 739.13px;
+  height: auto;
   display: flex;
   justify-content: flex-end;
 }
@@ -531,13 +533,11 @@ button {
 }
 
 .features-bar {
-  position: absolute;
-  bottom: 0;
-  left: 0;
+  display: block;
   width: 137.33px;
   height: 34.17px;
   object-fit: contain;
-  pointer-events: none;
+  margin-bottom: 20px;
 }
 
 .features-wrapper {
@@ -564,8 +564,9 @@ button {
 
   color: #000000;
 
-  width: 603.5px;
-  height: 140px;
+  width: 100%;
+  max-width: 603.5px;
+  min-height: 140px;
 
   margin-bottom: 40px;
 }
@@ -592,7 +593,8 @@ button {
 }
 
 .feature-cards-wrapper {
-  width: 594px;
+  width: 100%;
+  max-width: 594px;
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -604,8 +606,9 @@ button {
 
   color: #374151;
 
-  width: 603.5px;
-  height: 140px;
+  width: 100%;
+  max-width: 603.5px;
+  min-height: 140px;
 
   margin-bottom: 40px;
 }
@@ -824,13 +827,23 @@ button {
   }
 
   .features-bar {
-    display: none;
+    display: block;
+    margin: 20px 0;
+    width: 137.33px;
+    height: auto;
+    order: 4;
   }
 
   .features-wrapper {
     flex-direction: column;
 
-    gap: 50px;
+    gap: 40px;
+    display: flex;
+  }
+
+  .features-left,
+  .features-right {
+    display: contents;
   }
 
   .features-left h2 {
@@ -841,6 +854,7 @@ button {
     height: auto;
 
     margin-bottom: 26px;
+    order: 1;
   }
 
   .features-text {
@@ -851,16 +865,20 @@ button {
     height: auto;
 
     margin-bottom: 30px;
+    order: 2;
   }
 
   .feature-cards-wrapper {
     width: 100%;
     height: auto;
     gap: 20px;
+    order: 5;
   }
 
   .features-left img {
     max-width: 100%;
+    order: 3;
+    margin-bottom: 30px;
   }
 
   .feature-card {
